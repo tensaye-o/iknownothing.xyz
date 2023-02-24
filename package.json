@@ -1,11 +1,12 @@
 {
   "name": "lib",
   "version": "1.0.0",
-  "main": "index.js",
+  "source": "src/index.html",
   "author": "tensaye-yuan",
   "license": "MIT",
   "scripts": {
-    "dev": "yarn parcel src/index.html"
+    "start": "parcel",
+    "dev": "parcel src/index.html"
   },
   "devDependencies": {
     "parcel": "^2.8.3"
