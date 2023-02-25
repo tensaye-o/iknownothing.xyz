@@ -19,16 +19,11 @@ body {
 }
 
 .notify {
-  position: absolute;
-  top: 100px;
-  right: 0;
-  padding: 5px 10px;
-  background-image: linear-gradient(90deg, #f7c8e0, #dfffd8, #b4e4ff, #95bdff);
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
-  color: #202023;
+  color: rgb(34, 34, 34, 0.2);
+  font-size: -webkit-xxx-large;
   font-weight: bolder;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transform: rotate(26deg) translate(180px, -20px);
+  display: inline-block;
 }
 
 nav {
@@ -169,10 +164,6 @@ main {
   padding: 7px 0;
 }
 
-.tabs ul li:nth-child(1) {
-  background-color: rgb(33, 37, 41);
-}
-
 .tabs ul li:nth-child(1) a span {
   color: #fff;
   border-bottom: 3px solid #9dc08b;
@@ -189,6 +180,16 @@ section {
   display: flex;
   flex-direction: column;
   gap: 1em;
+}
+
+section .pinned {
+  display: flex;
+  align-items: center;
+  font-size: smaller;
+  color: #bbb;
+  gap: 5px;
+  font-weight: 600;
+  margin-bottom: 0.5em;
 }
 
 section article {
@@ -213,9 +214,27 @@ section article p {
   margin-top: 1em;
 }
 
-section article span {
+section article .date {
   font-size: small;
   color: #bbb;
+}
+
+section .more {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section .more .details {
+  display: flex;
+  gap: 5px;
+  font-size: small;
+  color: #f1f3f5;
+}
+
+section .more .options a {
+  text-decoration: none;
 }
 
 footer {
