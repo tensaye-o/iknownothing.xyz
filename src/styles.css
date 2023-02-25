@@ -18,14 +18,6 @@ body {
   scroll-behavior: smooth;
 }
 
-.notify {
-  color: rgb(34, 34, 34, 0.2);
-  font-size: -webkit-xxx-large;
-  font-weight: bolder;
-  transform: rotate(26deg) translate(180px, -20px);
-  display: inline-block;
-}
-
 nav {
   width: 100%;
   backdrop-filter: blur(16px) saturate(180%);
@@ -164,14 +156,16 @@ main {
   padding: 7px 0;
 }
 
-.tabs ul li:nth-child(1) a span {
-  color: #fff;
-  border-bottom: 3px solid #9dc08b;
+.tabs ul li > a > span {
+  color: #bbb;
+  border-bottom: 3px solid transparent;
   padding: 4px;
 }
 
-.hl {
-  border-bottom: 3px solid #9dc08b;
+.tabs ul li > a > span.hl {
+  transition: all 0.2s ease-in-out;
+  color: #fff;
+  border-bottom-color: #9dc08b;
 }
 
 section {
