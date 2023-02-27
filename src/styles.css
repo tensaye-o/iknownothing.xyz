@@ -36,6 +36,7 @@ nav a {
   height: 44px;
   display: grid;
   place-content: center;
+  color: #f1f3f5;
 }
 
 header {
@@ -99,7 +100,7 @@ header .tight {
 
 .bottom {
   width: 100%;
-  padding: 0 1em 2em 1em;
+  padding: 0 1em 1em 1em;
 }
 
 .avatar {
@@ -119,19 +120,18 @@ header .tight {
 main {
   width: 100%;
   background-color: var(--bg);
-  height: 1000px;
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
 
 .tabs {
-  /* padding: 0 0 2em 0; */
   position: sticky;
   top: calc(0.6em + 44px);
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(32, 32, 35, 0.75);
+  margin-bottom: 0.5em;
 }
 
 .tabs ul {
@@ -143,6 +143,10 @@ main {
 .tabs ul li a {
   text-decoration: none;
   color: #bbb;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
 }
 
 .tabs ul li a span {
@@ -151,15 +155,12 @@ main {
 
 .tabs ul li {
   flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  padding: 7px 0;
 }
 
 .tabs ul li > a > span {
   color: #bbb;
   border-bottom: 3px solid transparent;
-  padding: 4px;
+  padding: 6px 4px;
 }
 
 .tabs ul li > a > span.hl {
@@ -171,7 +172,7 @@ main {
 section {
   padding: 0 1em;
   width: 100%;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 1em;
 }
@@ -224,7 +225,13 @@ section .more .details {
   display: flex;
   gap: 5px;
   font-size: small;
-  color: #f1f3f5;
+  color: #bbb;
+  font-weight: 600;
+  padding: 2px 0;
+}
+
+.show {
+  display: flex;
 }
 
 section .more .options a {
@@ -243,6 +250,15 @@ footer {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.bg {
+  position: absolute;
+  opacity: 0.05;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  transform: translate(50%, 25%);
 }
 
 .btn {
@@ -277,5 +293,9 @@ footer {
 
   main {
     width: 724px;
+  }
+
+  .tabs ul li:hover {
+    background-color: #212529;
   }
 }
