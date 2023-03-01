@@ -109,6 +109,12 @@ header .tight {
   border-radius: 50%;
   transform: translateY(-50%);
   border: 6px solid var(--bg);
+  background: rgb(187, 187, 187);
+  background: radial-gradient(
+    circle,
+    rgba(187, 187, 187, 1) 30%,
+    rgba(241, 243, 245, 1) 100%
+  );
 }
 
 .heading {
