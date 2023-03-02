@@ -9,18 +9,18 @@
     <link
       rel="preload"
       as="style"
-      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&subset=latin&text=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ203%2C.-%27%C2%A9%20&family=Tilt+Warp&text=Tensaye%20Yuan&display=swap"
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&subset=latin&text=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ203%2C.-%27%C2%A9%20&family=Tilt+Warp&text=Tensaye%20Yuan&display=block"
     />
     <link
       rel="stylesheet"
       media="print"
       onload="this.onload=null;this.removeAttribute('media');"
-      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&subset=latin&text=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ203%2C.-%27%C2%A9%20&family=Tilt+Warp&text=Tensaye%20Yuan&display=swap"
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&subset=latin&text=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ203%2C.-%27%C2%A9%20&family=Tilt+Warp&text=Tensaye%20Yuan&display=block"
     />
     <noscript>
       <link
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&subset=latin&text=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ203%2C.-%27%C2%A9%20&family=Tilt+Warp&text=Tensaye%20Yuan&display=swap"
+        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&subset=latin&text=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ203%2C.-%27%C2%A9%20&family=Tilt+Warp&text=Tensaye%20Yuan&display=block"
       />
     </noscript>
 
@@ -54,6 +54,14 @@
     <meta name="msapplication-TileColor" content="#00425a" />
     <meta name="theme-color" content="#202023" />
 
+    <script type="module">
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register(
+          new URL('service-worker.js', import.meta.url),
+          { type: 'module' }
+        )
+      }
+    </script>
     <script type="module" src="app.js"></script>
   </head>
   <body>
