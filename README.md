@@ -4,4 +4,4 @@
 
 - [x] blur effect when image not downloaded
 
-- [ ] transitions improvement while tab switch
+- [x] transitions improvement while tab switch

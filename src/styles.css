@@ -125,6 +125,7 @@ header .tight {
 
 main {
   width: 100%;
+  min-height: calc(100vh - 0.6em - 83px);
   background-color: var(--bg);
   display: flex;
   flex-direction: column;
@@ -138,6 +139,7 @@ main {
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(32, 32, 35, 0.75);
   margin-bottom: 0.5em;
+  z-index: 1;
 }
 
 .tabs ul {
