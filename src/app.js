@@ -58,3 +58,5 @@ tabs.forEach((tab) => {
     onTap(tab)
   })
 })
+
+document.querySelector('footer').textContent += ` ${new Date().getFullYear()}`
