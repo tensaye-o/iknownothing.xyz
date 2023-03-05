@@ -8,6 +8,6 @@
 
 - [x] lighthouse performance issues
 
-- [ ] add service worker for pwa
+- [x] add service worker for pwa
 
 - [ ] ban long tap or right click

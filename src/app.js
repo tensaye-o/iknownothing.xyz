@@ -60,3 +60,4 @@ tabs.forEach((tab) => {
 })
 
 document.querySelector('footer').textContent += ` ${new Date().getFullYear()}`
+document.title = 'Feed - iknownothing.xyz'
