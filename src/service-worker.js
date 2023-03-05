@@ -10,12 +10,10 @@ async function activate() {
   await Promise.all(keys.map((key) => key !== version && caches.delete(key)))
 }
 
-async function fetching(e) {
-  const req = e.request
-  const res = await caches.match(req)
-  e.respondWith(res || fetch(req))
-}
-
 addEventListener('install', (e) => e.waitUntil(install()))
 addEventListener('activate', (e) => e.waitUntil(activate()))
-addEventListener('fetch', (e) => e.waitUntil(fetching(e)))
+addEventListener('fetch', (e) =>
+  e.respondWith(
+    caches.match(e.request).then((response) => response || fetch(e.request))
+  )
+)
