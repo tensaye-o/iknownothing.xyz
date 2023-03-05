@@ -11,5 +11,9 @@ async function activate() {
 }
 
 addEventListener('install', (e) => e.waitUntil(install()))
+addEventListener('fetch', (e) =>
+  e.respondWith(
+    caches.match(e.request).then((response) => response || fetch(e.request))
+  )
+)
 addEventListener('activate', (e) => e.waitUntil(activate()))
-addEventListener('fetch', () => {})
