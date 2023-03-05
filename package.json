@@ -19,5 +19,8 @@
     "@parcel/service-worker": "^2.8.3",
     "@parcel/transformer-webmanifest": "2.8.3",
     "parcel": "^2.8.3"
+  },
+  "dependencies": {
+    "three": "0.122"
   }
 }

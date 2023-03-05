@@ -61,3 +61,18 @@ tabs.forEach((tab) => {
 
 document.querySelector('footer').textContent += ` ${new Date().getFullYear()}`
 document.title = 'Feed - iknownothing.xyz'
+
+let flashed = true
+const flash = document.querySelector('nav > span')
+const tesseract = document.querySelector('.top > iframe')
+const box = document.querySelector('.box')
+const on = flash.querySelector('.on'),
+  off = flash.querySelector('.off')
+const handleFlash = () => {
+  on.style.display = flashed ? 'block' : 'none'
+  off.style.display = flashed ? 'none' : 'block'
+  flashed ? tesseract.classList.add('hide') : tesseract.classList.remove('hide')
+  box.className = flashed ? 'img box' : 'gradient box'
+  flashed ^= true
+}
+flash.addEventListener('click', handleFlash)
