@@ -12,7 +12,18 @@ async function activate() {
 
 async function match(e) {
   const res = await caches.match(e.request)
-  return fetch(e.request) || res
+  if (!navigator.onLine) {
+    return res
+  } else {
+    try {
+      const updated = await fetch(e.request)
+      const cache = await caches.open(version)
+      await cache.put(e.request, updated.clone())
+      return updated
+    } catch (err) {
+      alert(err)
+    }
+  }
 }
 
 addEventListener('install', (e) => e.waitUntil(install()))
