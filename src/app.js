@@ -1,3 +1,5 @@
+import confetti from 'canvas-confetti'
+
 const tabs = document.querySelectorAll('.tabs > ul > li')
 if (!tabs.length) {
   console.error('No tabs found')
@@ -76,3 +78,16 @@ const handleFlash = () => {
   flashed ^= true
 }
 flash.addEventListener('click', handleFlash)
+
+const btn = document.querySelector('button.btn')
+const handleConfetti = () => {
+  confetti({
+    particleCount: 100,
+    spread: 70,
+    origin: { y: 0.6 },
+  })
+
+  btn.disabled = true
+  btn.style.filter = 'grayscale(1)'
+}
+btn.addEventListener('click', handleConfetti)
