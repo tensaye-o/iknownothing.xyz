@@ -1,13 +1,5 @@
 🐛 bug list
 
-- [x] favicon in different devices
+- [ ] use partytown for perf improvement
 
-- [x] blur effect when image not downloaded
-
-- [x] transitions improvement while tab switch
-
-- [x] lighthouse performance issues
-
-- [x] add service worker for pwa
-
-- [ ] ban long tap or right click
+- [ ] fix service worker update issue

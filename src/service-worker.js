@@ -12,7 +12,7 @@ async function activate() {
 
 async function match(e) {
   const res = await caches.match(e.request)
-  return res || fetch(e.request)
+  return fetch(e.request) || res
 }
 
 addEventListener('install', (e) => e.waitUntil(install()))
