@@ -21,7 +21,7 @@ async function match(e) {
       await cache.put(e.request, updated.clone())
       return updated
     } catch (err) {
-      alert(err)
+      return res
     }
   }
 }

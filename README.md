@@ -2,4 +2,4 @@
 
 - [ ] use partytown for perf improvement
 
-- [ ] fix service worker update issue
+- [x] fix service worker update issue
