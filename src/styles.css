@@ -4,6 +4,10 @@
   --primary-color: #f1f3f5;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--bg);
   display: flex;
@@ -12,7 +16,6 @@ body {
   font-size: 16px;
   font-family: 'M PLUS Rounded 1c', sans-serif;
   color: var(--primary-color);
-  scroll-behavior: smooth;
 }
 
 nav {
@@ -270,20 +273,30 @@ section .more {
   align-items: center;
 }
 
-section .more .details {
-  display: flex;
+section:not(#feed) .details {
+  margin-top: 1em;
+}
+
+.details {
+  display: inline-flex;
   gap: 5px;
   font-size: small;
-  color: #bbb;
+  color: #c7e8ca;
   font-weight: 600;
-  padding: 2px 0;
+  padding: 2px;
+  border-bottom: 2px double #c7e8ca;
 }
 
 .show {
   display: flex;
 }
 
-section .more .options a {
+section:not(#feed) .options {
+  display: flex;
+  justify-content: end;
+}
+
+.options a {
   text-decoration: none;
 }
 
@@ -346,5 +359,9 @@ footer {
 
   .tabs ul li:hover {
     background-color: #212529;
+  }
+
+  .details:hover {
+    background-color: rgba(255, 255, 255, 0.5);
   }
 }
