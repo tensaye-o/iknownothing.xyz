@@ -66,7 +66,7 @@
   </head>
   <body>
     <nav>
-      <a href="javascript:void(0);">
+      <a href="javascript:void(0);" aria-label="Logo link to home">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
@@ -110,12 +110,20 @@
     </nav>
     <header>
       <div class="top">
-        <iframe src="./tesseract/index.html" loading="lazy" />
+        <iframe
+          src="./tesseract/index.html"
+          loading="lazy"
+          title="Tesseract made with 3.js"
+        />
       </div>
       <div class="bottom">
         <div class="heading">
           <div class="gradient box">
-            <img class="avatar" src="./assets/avatar-264x264.png" />
+            <img
+              class="avatar"
+              src="./assets/avatar-264x264.png"
+              alt="Tensaye's Avatar"
+            />
           </div>
           <button type="button" role="button" class="btn">PWAs</button>
         </div>
@@ -461,10 +469,16 @@
       </section>
       <section id="content">
         <article>
-          <h3>Unicode w/ JavaScript</h3>
+          <h3 id="unicode-in-javascript">Unicode in JavaScript</h3>
           <p>Go deep dive into Unicode used inside JavaScript.</p>
           <div class="options">
-            <a href="javascript:void(0);">
+            <a
+              aria-label="link to this heading"
+              aria-describedby="unicode-in-javascript"
+              href="https://juejin.cn/post/6992724626165989389"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span type="button" role="button" class="details">
                 Open
                 <svg

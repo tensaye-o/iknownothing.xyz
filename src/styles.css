@@ -1,6 +1,5 @@
 :root {
-  --bg: #202023;
-  --main-bg: #15191d;
+  --bg: #15191d;
   --primary-color: #f1f3f5;
 }
 
@@ -22,7 +21,7 @@ nav {
   width: 100%;
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(32, 32, 35, 0.75);
+  background-color: rgba(21, 25, 29, 0.75);
   position: sticky;
   top: 0;
   z-index: 1;
@@ -141,7 +140,7 @@ iframe.hide {
 }
 
 .img {
-  background: #202023;
+  background: var(--bg);
   background-image: url('./assets/bg-132x132.png');
 }
 
@@ -181,9 +180,10 @@ main {
   top: calc(0.6em + 44px);
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(32, 32, 35, 0.75);
+  background-color: rgba(21, 25, 29, 0.75);
   margin-bottom: 0.5em;
   z-index: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .tabs ul {
@@ -357,11 +357,8 @@ footer {
     width: 724px;
   }
 
-  .tabs ul li:hover {
-    background-color: #212529;
-  }
-
+  .tabs ul li:hover,
   .details:hover {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #212529;
   }
 }
