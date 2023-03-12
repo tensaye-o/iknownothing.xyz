@@ -252,6 +252,11 @@ section article .title {
   gap: 10px;
 }
 
+article h2 {
+  font-size: 1.17rem;
+  font-weight: 700;
+}
+
 .title span {
   display: grid;
   place-content: center;
@@ -275,6 +280,34 @@ section .more {
 
 section:not(#feed) .details {
   margin-top: 1em;
+}
+
+section#about article .wave {
+  display: inline-block;
+  font-size: 1.3rem;
+  animation: 2s linear wave 3;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-20deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(20deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .details {
