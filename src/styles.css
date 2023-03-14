@@ -285,26 +285,32 @@ section:not(#feed) .details {
 section#about article .wave {
   display: inline-block;
   font-size: 1.3rem;
-  animation: 2s linear wave 3;
+  animation: waving-hand 2.5s infinite;
+  transform-origin: 70% 70%;
 }
 
-@keyframes wave {
+@keyframes waving-hand {
   0% {
     transform: rotate(0deg);
   }
-
-  25% {
-    transform: rotate(-20deg);
+  10% {
+    transform: rotate(14deg);
   }
-
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
   50% {
+    transform: rotate(10deg);
+  }
+  60% {
     transform: rotate(0deg);
   }
-
-  75% {
-    transform: rotate(20deg);
-  }
-
   100% {
     transform: rotate(0deg);
   }
