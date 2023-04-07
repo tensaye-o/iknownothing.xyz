@@ -190,9 +190,9 @@ function getAngle(t) {
 
 function resizeRenderer(renderer) {
   const canvas = renderer.domElement
-  const pixelRatio = window.devicePixelRatio
-  const width = (canvas.clientWidth * pixelRatio) | 0
-  const height = (canvas.clientHeight * pixelRatio) | 0
+  // const pixelRatio = window.devicePixelRatio
+  const width = (canvas.clientWidth * 2) | 0
+  const height = (canvas.clientHeight * 2) | 0
   const needsResize = canvas.width !== width || canvas.height !== height
   if (needsResize) {
     renderer.setSize(width, height, false)
